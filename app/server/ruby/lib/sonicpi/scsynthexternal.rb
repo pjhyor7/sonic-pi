@@ -27,8 +27,8 @@ module SonicPi
     def initialize(events, opts={})
       @events = events
       @hostname = opts[:hostname] || "127.0.0.1"
-      @port = opts[:scsynth_port] || 4556
-      @send_port = opts[:scsynth_send_port] || 4556
+      @port = opts[:scsynth_port] || 21607
+      @send_port = opts[:scsynth_send_port] || 21607
       @register_cue_event_lambda = opts[:register_cue_event_lambda]
       raise "No cue event lambda!" unless @register_cue_event_lambda
       @out_queue = SizedQueue.new(20)
